@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Roboto_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Remy Gratwohl",
-  description: "The personal website of Remy Gratwohl, a software developer.",
+  description: "Personal website of Remy Gratwohl, a software developer.",
 };
 
 export default function RootLayout({

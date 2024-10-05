@@ -1,10 +1,12 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <h1 className="text-4xl font-bold">Remy Gratwohl</h1>
+    <main className="flex min-h-screen max-w-full flex-col p-8 md:p-20 font-mono">
+      <h1 className="text-5xl font-bold mb-4">Remy Gratwohl</h1>
+      <div className="text-2xl mb-4">
+        <span>Working on Web Performance @ </span>
+        <a href="//www.priceline.com" target="_blank" rel="noopener noreferrer">
+          Priceline.com
+        </a>
       </div>
     </main>
   );
