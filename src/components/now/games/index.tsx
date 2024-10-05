@@ -57,18 +57,20 @@ export const RecentlyPlayedGames = async () => {
       <fieldset className="border-4">
         <legend className="mr-auto ml-4 px-2 text-xl">Games</legend>
         <div className="flex p-4 overflow-hidden gap-8 flex-col sm:flex-row">
-          {filteredGames.map((game) => (
-            <div className="" key={game.appid}>
-              <a href={`https://store.steampowered.com/app/${game.appid}`}>
-                <Image
-                  src={`https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/${game.appid}/header.jpg`}
-                  alt={game.name}
-                  width={460}
-                  height={215}
-                />
-              </a>
-            </div>
-          ))}
+          {filteredGames.map((game) =>
+            game ? (
+              <div className="" key={game.appid}>
+                <a href={`https://store.steampowered.com/app/${game.appid}`}>
+                  <Image
+                    src={`https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/${game.appid}/header.jpg`}
+                    alt={game.name}
+                    width={460}
+                    height={215}
+                  />
+                </a>
+              </div>
+            ) : null
+          )}
         </div>
       </fieldset>
     </div>
